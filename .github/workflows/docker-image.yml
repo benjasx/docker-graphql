@@ -29,8 +29,10 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t benjasx98/docker-graphql:0.0.2 .
+        docker build -t benjasx98/docker-graphql:latest .
     - name: Push Doccker Image
       run: |
-        docker push benjasx98/docker-graphql:0.0.2 
+        docker push benjasx98/docker-graphql:0.0.2
+        docker push benjasx98/docker-graphql:latest
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
